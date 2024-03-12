@@ -7,7 +7,7 @@ const calcularTotalPontos = (pontuacao) => {
     return parseInt(gols) * 3 + parseInt(assistencia) * 2 + parseInt(desarme) + parseInt(defesa);
 };
 
-const useJogadores = () => {
+ export const useJogadores = () => {
     const [jogadores, setJogadores] = useState([]);
 
     useEffect(() => {
@@ -45,4 +45,4 @@ const useJogadores = () => {
     return { jogadores, adicionarJogador,excluirJogador};
 };
 
-export default useJogadores;
+
