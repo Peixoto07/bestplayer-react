@@ -36,13 +36,26 @@ const calcularTotalPontos = (pontuacao) => {
         localStorage.setItem('jogadores', JSON.stringify([...jogadores, novoJogador]));
     };
 
-    const excluirJogador = (index) => {
-        const novosJogadores = [...jogadores];
-        novosJogadores.splice(index, 1);
+    const excluirJogador = (id) => {
+        const novosJogadores = jogadores.filter(jogador => jogador.id !== id);
         setJogadores(novosJogadores);
         localStorage.setItem('jogadores', JSON.stringify(novosJogadores));
-      };
-    return { jogadores, adicionarJogador,excluirJogador};
+    };
+    
+
+      const atualizaJogador = (id, novoJogador) => {
+        const novosJogadores = jogadores.map(jogador => {
+            if (jogador.id === id) {
+                return novoJogador;
+            }
+            return jogador;
+        });
+    
+        setJogadores(novosJogadores);
+        localStorage.setItem('jogadores', JSON.stringify(novosJogadores));
+    };
+    
+    return { jogadores, atualizaJogador, adicionarJogador,excluirJogador};
 };
 
 
