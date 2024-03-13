@@ -7,7 +7,7 @@
     margin-top: 10px;
 }
 
-.listContainer h2{
+.listContainer h3{
 margin: 0;
 }
 
@@ -27,18 +27,16 @@ margin: 0;
     width: 100%;
     display: flex;
     border-top: solid 1px #3b3b3b;
-    height: 7vh;
+    height: 2rem;
     align-items: center;
+    padding: 1rem 0;
     justify-content: space-between;
 }
 
-.listContainer div{
-    height: 4rem;
-    display: flex;
-    align-items: center;
-}
+
 
 .divIcons{
+    display: flex;
     gap: 1rem;
     font-size: 1.5rem;
 }
@@ -47,4 +45,35 @@ margin: 0;
     background-color: #33383F;
     padding: 8px;
     border-radius: 6px;
+}
+
+.soccerIcon{
+    position: fixed;
+    font-size: 18rem;
+    bottom: 40%;
+    color: #33383f69;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.textoLista{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+}
+
+.quantidadeJogador{
+    font-weight: 400;
+    font-size: larger;
 }
