@@ -1,0 +1,94 @@
+.modal {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    background-color: #63636354;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    height: 53vh;
+    width: 90vw;
+    border-radius: 20px;
+    background-color: black;
+    align-items: center;
+}
+
+.close {
+    display: flex;
+    width: 100%;
+    padding-right: 2rem;
+    margin: -10px;
+    font-size: 2rem;
+    text-align: end;
+    flex-direction: column;
+
+}
+
+
+.modalContent svg {
+    font-size: 5rem;
+}
+
+.modalContent>input {
+    background: none;
+    border: none;
+    color: white;
+    margin-top: 0.5rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pontuacao {
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    width: 100%;
+    height: 12rem;
+    border-top: solid 1px #f5434c;
+    padding: 1rem 0;
+    border-bottom: solid 1px #f5434c;
+    margin: 1rem 0;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.divBtn {
+
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+    height: 3rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.divBtn button {
+    width: 6rem;
+    height: 3.3rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+
+}
+
+.btnSalvar {
+    background-color: #f5434c;
+    color: #000000;
+
+}
+
+.btnCancelar {
+    background-color: #33383f;
+    color: white;
+}

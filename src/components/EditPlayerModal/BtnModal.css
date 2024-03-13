@@ -1,0 +1,33 @@
+.btnContainer{
+    width: 9rem;
+    border-radius: 10px;
+    height: 3rem;
+    display: flex;
+    padding: 0px 3px;
+    box-shadow: 0 6px 13px 0px rgb(0 0 0 / 39%);
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btnContainer button{
+    background-color: #33383f;
+    padding: 4px;
+    width: 5rem;
+    color: white;
+    font-size: 1.3rem;
+    height: 2.6rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  .btnContainer input{
+    width: 100%;
+    background: none;
+    height: 4vh;
+    text-align: center;
+    font-size: medium;
+    border: none;
+  }
+
