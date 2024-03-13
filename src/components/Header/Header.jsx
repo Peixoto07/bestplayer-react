@@ -8,7 +8,7 @@ const Header = () => {
 
         <header className='headerContainer'>
             <FiMenu className='icon'/>
-            <h2>teste</h2>
+            <h3>BestPlayer</h3>
             <FaCircleUser className='icon' />
         </header>
      );
