@@ -5,12 +5,12 @@ import { useJogadores } from "../components/hooks/useJogadores";
 
 const Home = () => {
 
-    const { jogadores, adicionarJogador, excluirJogador } = useJogadores();
+    const { jogadores, adicionarJogador, atualizaJogador,excluirJogador } = useJogadores();
     return (
         <>
             <Register adicionarJogador={adicionarJogador}/>
 
-            <PlayerList jogadores={jogadores} excluirJogador={excluirJogador}/>
+            <PlayerList jogadores={jogadores} atualizaJogador={atualizaJogador} excluirJogador={excluirJogador}/>
         </>
     );
 };
