@@ -1,0 +1,33 @@
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 18rem;
+    position: fixed;
+    animation: slideDown 0.5s forwards; 
+  }
+  
+  
+  .verde {
+    background-color: #4CAF50; 
+    color: white;
+  }
+  
+  .vermelho {
+    background-color: #f44336; 
+    color: white;
+  }
+  

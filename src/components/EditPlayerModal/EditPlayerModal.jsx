@@ -4,7 +4,7 @@ import BtnModal from "./BtnModal";
 import './EditPlayerModal.css'
 import { useState, useEffect } from 'react';
 
-const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador }) => {
+const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador,handleMostrarAlerta  }) => {
     const [playerData, setPlayerData] = useState(null);
 
    
@@ -25,7 +25,10 @@ const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador }) =
 
     const handleSave = (id,novoJogador) => {
         atualizaJogador(id,novoJogador)
+        handleMostrarAlerta (2000)
         toggleModal()
+
+
     };
 
     if (!playerData) {

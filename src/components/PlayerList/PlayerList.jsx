@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 
 
-const PlayerList = ({ jogadores, excluirJogador,atualizaJogador }) => {
+const PlayerList = ({ jogadores, excluirJogador,atualizaJogador,handleMostrarAlerta  }) => {
 
   const [modalStatus, setModalStatus] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
@@ -68,6 +68,7 @@ const PlayerList = ({ jogadores, excluirJogador,atualizaJogador }) => {
       )}
       {modalStatus === true ? (
         <EditPlayerModal
+        handleMostrarAlerta ={handleMostrarAlerta }
           jogadorSelecionado={selectedPlayer}
           statusModal={handleModal}
           atualizaJogador={atualizaJogador}
