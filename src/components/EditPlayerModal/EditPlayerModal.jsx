@@ -4,15 +4,15 @@ import BtnModal from "./BtnModal";
 import './EditPlayerModal.css'
 import { useState, useEffect } from 'react';
 
-const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador,handleMostrarAlerta  }) => {
+const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador, handleMostrarAlerta }) => {
     const [playerData, setPlayerData] = useState(null);
 
-   
+
 
     useEffect(() => {
         if (jogadorSelecionado) {
             setPlayerData(jogadorSelecionado);
-           
+
         }
     }, [jogadorSelecionado]);
 
@@ -20,12 +20,12 @@ const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador,hand
         statusModal();
     };
 
-  
-    
 
-    const handleSave = (id,novoJogador) => {
-        atualizaJogador(id,novoJogador)
-        handleMostrarAlerta (2000)
+
+
+    const handleSave = (id, novoJogador) => {
+        atualizaJogador(id, novoJogador)
+        handleMostrarAlerta(2000)
         toggleModal()
 
 
@@ -42,23 +42,27 @@ const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador,hand
                 nome: newValue
             }));
         } else {
+            let newPontuacao = { ...playerData.pontuacao, [campo]: newValue };
+            let totalPontos = calcularTotalPontos(newPontuacao);
             setPlayerData(prevPlayerData => ({
                 ...prevPlayerData,
-                pontuacao: {
-                    ...prevPlayerData.pontuacao,
-                    [campo]: newValue
-                }
+                pontuacao: newPontuacao,
+                totalPontos: totalPontos
             }));
         }
     };
-    
+
+    const calcularTotalPontos = (pontuacao) => {
+        const { gols, assistencia, desarme, defesa } = pontuacao;
+        return parseInt(gols) * 3 + parseInt(assistencia) * 2 + parseInt(desarme) + parseInt(defesa);
+    };
 
     return (
         <div className="modal">
             <div className="modalContent">
                 <span onClick={toggleModal} className="close">&times;</span>
                 <FaUserCircle />
-                <input type="text" name="nome" value={playerData.nome || ''} onChange={e=>handlePontuacaoChange('nome',e.target.value)} />
+                <input type="text" name="nome" value={playerData.nome || ''} onChange={e => handlePontuacaoChange('nome', e.target.value)} />
                 <div className="pontuacao">
                     <div className="">
                         <label>Gols</label>
@@ -81,8 +85,8 @@ const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador,hand
                     </div>
                 </div>
                 <div className="divBtn">
-                <button className="btnCancelar" onClick={toggleModal}>Cancelar</button>
-                <button className="btnSalvar" onClick={() => handleSave(playerData.id, playerData)}>Salvar</button>
+                    <button className="btnCancelar" onClick={toggleModal}>Cancelar</button>
+                    <button className="btnSalvar" onClick={() => handleSave(playerData.id, playerData)}>Salvar</button>
 
                 </div>
 
