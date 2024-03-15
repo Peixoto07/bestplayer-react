@@ -5,17 +5,18 @@ import { MdEdit } from "react-icons/md";
 import { GiSoccerKick } from "react-icons/gi";
 import EditPlayerModal from "../EditPlayerModal/EditPlayerModal";
 import { useState } from 'react';
+import useUsuarios from '../hooks/useUsuarios';
 
 
 
 
-const PlayerList = ({ jogadores, excluirJogador,atualizaJogador,handleMostrarAlerta  }) => {
-
+const PlayerList = () => {
+  const { usuarios, excluirUsuario } = useUsuarios()
   const [modalStatus, setModalStatus] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
-  const handleEditClick = (jogador) => {
-    const playerData = jogador;
+  const handleEditClick = (usuarios) => {
+    const playerData = usuarios;
     setSelectedPlayer(playerData); 
     handleModal();
   };
@@ -29,8 +30,8 @@ const PlayerList = ({ jogadores, excluirJogador,atualizaJogador,handleMostrarAle
   const textoListaCheia = () => {
     return (
       <div className='textoLista'>
-        <h3>Jogadores</h3>
-        <span className='quantidadeJogador'>{jogadores.length}</span>
+        <h3>jogadores</h3>
+        <span className='quantidadeJogador'>{usuarios.length}</span>
       </div>
     )
   }
@@ -46,20 +47,20 @@ const PlayerList = ({ jogadores, excluirJogador,atualizaJogador,handleMostrarAle
   return (
     <div className="listContainer">
 
-      {jogadores.length === 0 ? textoListaVazia() : textoListaCheia()}
+      {usuarios.length === 0 ? textoListaVazia() : textoListaCheia()}
 
-      {jogadores.length === 0 ? (
+      {usuarios.length === 0 ? (
         <GiSoccerKick className='soccerIcon' />
       ) : (
         <ul>
-          {jogadores.map((jogador, index) => (
+          {usuarios.map((usuarios, index) => (
             <li key={index}>
               <div className="divNameList">
-                <strong>{jogador.nome}</strong>
+                <strong>{usuarios.nome}</strong>
               </div>
               <div className="divIcons">
-                <TiDelete onClick={() => excluirJogador(jogador.id)} className="iconList" />
-                <MdEdit onClick={() => handleEditClick(jogador)} className="iconList" />
+                <TiDelete onClick={() => excluirUsuario(usuarios.id)} className="iconList" />
+                <MdEdit onClick={() => handleEditClick(usuarios)} className="iconList" />
 
               </div>
             </li>
@@ -68,10 +69,9 @@ const PlayerList = ({ jogadores, excluirJogador,atualizaJogador,handleMostrarAle
       )}
       {modalStatus === true ? (
         <EditPlayerModal
-        handleMostrarAlerta ={handleMostrarAlerta }
           jogadorSelecionado={selectedPlayer}
           statusModal={handleModal}
-          atualizaJogador={atualizaJogador}
+        
         />
       ) : ("")}
     </div>

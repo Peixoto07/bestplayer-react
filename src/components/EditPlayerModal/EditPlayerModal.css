@@ -16,8 +16,9 @@
     flex-direction: column;
     height: 53vh;
     width: 90vw;
-    border-radius: 20px;
-    background-color: black;
+    max-width: 720px;
+    border-radius: 12px;
+    background: radial-gradient(circle, #4d5159, rgb(34 35 39) 100%);
     align-items: center;
 }
 
@@ -51,16 +52,16 @@
 .pontuacao {
     display: flex;
     align-items: center;
-    background-color: #212121;
     width: 100%;
+    gap: 2rem;
     height: 12rem;
-    border-top: solid 1px #f5434c;
     padding: 1rem 0;
-    border-bottom: solid 1px #f5434c;
     margin: 1rem 0;
     text-align: center;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .divBtn {
@@ -89,6 +90,6 @@
 }
 
 .btnCancelar {
-    background-color: #33383f;
-    color: white;
+    background-color: white;
+    color: black;
 }

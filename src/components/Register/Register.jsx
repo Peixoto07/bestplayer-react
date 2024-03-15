@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 import './Register.css'
+import useUsuarios from '../hooks/useUsuarios';
 
 // eslint-disable-next-line react/prop-types
-const Register = ({adicionarJogador}) => {
-   
+const Register = () => {
+  const {adicionarUsuario } = useUsuarios()
   const [nome, setNome] = useState("");
 
   const handleInputChange = (event) => {
@@ -14,7 +15,7 @@ const Register = ({adicionarJogador}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (nome.trim() !== "") {
-      adicionarJogador(nome);
+      adicionarUsuario(nome);
       setNome("");
     }
   };

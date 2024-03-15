@@ -3,10 +3,13 @@ import { FaUserCircle } from "react-icons/fa";
 import BtnModal from "./BtnModal";
 import './EditPlayerModal.css'
 import { useState, useEffect } from 'react';
+import useUsuarios from "../hooks/useUsuarios";
+import useAlert from "../hooks/useAlert";
 
-const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador, handleMostrarAlerta }) => {
+const EditPlayerModal = ({ statusModal, jogadorSelecionado }) => {
     const [playerData, setPlayerData] = useState(null);
-
+    const { atualizarUsuario } = useUsuarios()
+    const {mostrarAlerta} = useAlert()
 
 
     useEffect(() => {
@@ -24,8 +27,8 @@ const EditPlayerModal = ({ statusModal, jogadorSelecionado, atualizaJogador, han
 
 
     const handleSave = (id, novoJogador) => {
-        atualizaJogador(id, novoJogador)
-        handleMostrarAlerta(2000)
+        atualizarUsuario(id, novoJogador)
+       mostrarAlerta(3000,"Jogador Atualizado","verde")
         toggleModal()
 
 
