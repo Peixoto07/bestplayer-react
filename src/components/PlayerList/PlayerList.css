@@ -9,6 +9,7 @@
 
 .listContainer h3{
 margin: 0;
+font-weight: 400;
 }
 
 .listContainer ul{
@@ -43,7 +44,7 @@ margin: 0;
 
 .iconList{
     background-color: #33383F;
-    padding: 8px;
+    padding: 0.3rem;
     border-radius: 6px;
 }
 
