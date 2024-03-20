@@ -59,8 +59,9 @@ export const UsuariosProvider = ({ children }) => {
         localStorage.setItem('usuarios', JSON.stringify(novosUsuarios));
     };
 
+    const usuariosOrdenados = usuarios.slice().sort((a, b) => b.totalPontos - a.totalPontos);
     return (
-        <UsuariosContext.Provider value={{ usuarios, adicionarUsuario, excluirUsuario, atualizarUsuario }}>
+        <UsuariosContext.Provider value={{ usuarios,usuariosOrdenados, adicionarUsuario, excluirUsuario, atualizarUsuario }}>
             {children}
         </UsuariosContext.Provider>
     );
