@@ -18,7 +18,7 @@ const UserIcon = () => {
                     <div className="nameUser">
                         {usuario.nome}
                     </div>
-                    <div className="totalPontos">
+                    <div className={`totalPontos ${index === 0 ? 'bgRed' : ''}`}>
                         Pts: <span>{usuario.totalPontos}</span>
                     </div>
                 </div>

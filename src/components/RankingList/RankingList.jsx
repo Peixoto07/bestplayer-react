@@ -7,14 +7,16 @@ const RankingList = () => {
     <div className="rankingContainer" >
       {usuariosOrdenados.map((usuario, index) => (
 
-        <div key={index} className={`cardRanking ${index === 0 ? 'borderGreen' : ''}`}>
+        <div key={index} className={`cardRanking ${index === 0 ? 'borderRed' : ''}`}>
 
           <div className="boxInfoItem">
 
             <div className="colocacao">{index + 1}</div>
             <div className="infoItem" >
               <div className="nomeInfoItem">{usuario.nome}</div>
-              <div className="totalPontos" >Pts: <span>{usuario.totalPontos}</span></div>
+              <div className={`totalPontos ${index === 0 ? 'bgRed' : ''}`} 
+              >Pts: <span>{usuario.totalPontos}</span>
+              </div>
             </div>
 
           </div>

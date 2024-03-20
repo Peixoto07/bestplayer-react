@@ -33,3 +33,7 @@
 .userBox:nth-child(2) {
     order: -1;
   }
+
+  .bgRed{
+    background-color: #fa2d38;
+  }

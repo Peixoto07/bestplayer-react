@@ -46,10 +46,10 @@
     font-size: small;
     border-radius: 6px;
     padding: 0px 4px;
-    color: #49c961;
+    color: #ffffff;
     text-align: center;
     width: 3rem;
-    background-color: #314938;
+    background-color: #4b515d;
 }
 .totalPontos span{
     font-weight: 500;
@@ -76,6 +76,6 @@
     color: #6d6d6d;
 }
 
-.borderGreen{
-    border: solid 1px #43ff43;
+.borderRed{
+    border: solid 1px #fa2d38;
 }
