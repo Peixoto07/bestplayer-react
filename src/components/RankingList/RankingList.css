@@ -1,0 +1,81 @@
+.boxInfoItem{
+    display: flex;
+    gap: 1rem;
+}
+
+.rankingContainer{
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 59vh;
+    flex-direction: column;
+    gap: .4rem;
+    align-items: center;
+}
+
+
+.cardRanking{
+    display: flex;
+    width: 80%;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    background-color: #33383F;
+    justify-content: space-between;
+}
+
+.colocacao{
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    font-size: 1.5rem;
+    border-right: solid 1px #fa2d38;
+    width: 2rem;
+}
+
+.infoItem{
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+}
+.nomeInfoItem{
+   
+    font-weight: 500;
+}
+
+.totalPontos{
+    font-size: small;
+    border-radius: 6px;
+    padding: 0px 4px;
+    color: #49c961;
+    text-align: center;
+    width: 3rem;
+    background-color: #314938;
+}
+.totalPontos span{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.boxPontuacao{
+    display: flex;
+    gap: 1rem;
+}
+
+.itemPontuacao{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itemPontuacao div{
+    display: flex;
+    flex-direction: column;
+}
+.itemPontuacao span{
+    font-size: small;
+    color: #6d6d6d;
+}
+
+.borderGreen{
+    border: solid 1px #43ff43;
+}
