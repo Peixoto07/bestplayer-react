@@ -15,8 +15,8 @@ const PlayerList = () => {
   const [modalStatus, setModalStatus] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
-  const handleEditClick = (usuarios) => {
-    const playerData = usuarios;
+  const handleEditClick = (usuario) => {
+    const playerData = usuario;
     setSelectedPlayer(playerData); 
     handleModal();
   };
@@ -53,14 +53,14 @@ const PlayerList = () => {
         <GiSoccerKick className='soccerIcon' />
       ) : (
         <ul>
-          {usuarios.map((usuarios, index) => (
+          {usuarios.map((usuario, index) => (
             <li key={index}>
               <div className="divNameList">
-                <strong>{usuarios.nome}</strong>
+                <strong>{usuario.nome}</strong>
               </div>
               <div className="divIcons">
-                <TiDelete onClick={() => excluirUsuario(usuarios.id)} className="iconList" />
-                <MdEdit onClick={() => handleEditClick(usuarios)} className="iconList" />
+                <TiDelete onClick={() => excluirUsuario(usuario.id)} className="iconList" />
+                <MdEdit onClick={() => handleEditClick(usuario)} className="iconList" />
 
               </div>
             </li>
