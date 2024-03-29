@@ -1,0 +1,58 @@
+.containerBtnGame{
+    margin: 2rem 0;
+    gap: 0.5rem;
+    text-align: center;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.containerBtnGame > div{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #33383f;
+    border-radius: 7px;
+    padding: .5rem;
+    justify-content: space-between;
+}
+
+.containerNav {
+    display: flex;
+    gap: 1rem;
+    HEIGHT: 5vh;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.boxBtnGame{
+    gap: 1rem;
+    width: 50%;
+    display: flex;
+}
+
+.boxBtnGame button{
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    max-width: 8rem;
+}
+
+.desactiveBtn{
+    background-color: #33383f;
+    color: white;
+
+}
+
+.activeBtn{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.btnSortear{
+    width: 25vw;
+    background: #f5434c;
+    border: none;
+    border-radius: 5px;
+    max-width: 8rem;
+}
