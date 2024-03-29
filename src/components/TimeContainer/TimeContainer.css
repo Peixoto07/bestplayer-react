@@ -1,0 +1,65 @@
+.checkboxAll{
+    width: 90%;
+    display: flex;
+    color: #767676;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+
+.timesContainer{
+    display: flex;
+    width: 80%;
+    height: 52vh;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.timesContainer div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 6px; */
+    align-items: center;
+    text-align: center;
+}
+
+.timesContainer h3{
+    width: 100%;
+    padding: .5rem 0;
+    margin: 0;
+    border-radius: 8px  8px 0 0;
+    background-color: #fa2d38;
+}
+
+.timesContainer ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    background-color: #33383f;
+    padding: 1rem 0;
+    margin: 0;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+    flex-direction: column;
+}
+
+.jogadoresContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 53vh;
+}
+
+.jogadoresContainer ul{
+    display: flex;
+    width: 90vw;
+    /* height: 70vh; */
+    padding: 0;
+    margin: 5px 0;
+    list-style: none;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
