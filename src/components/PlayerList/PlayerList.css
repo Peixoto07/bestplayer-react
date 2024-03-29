@@ -1,21 +1,21 @@
-.listContainer{
+.listContainer {
     WIDTH: 100vw;
     display: flex;
+    height: 74vh;
     overflow: auto;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
 }
 
-.listContainer h3{
-margin: 0;
-font-weight: 400;
+.listContainer h3 {
+    margin: 0;
+    font-weight: 400;
 }
 
-.listContainer ul{
+.listContainer ul {
     display: flex;
-    width: 80vw;
-    height: 70vh;
+    width: 90vw;
     padding: 0;
     margin: 5px 0;
     list-style: none;
@@ -24,31 +24,31 @@ font-weight: 400;
     align-items: center;
 }
 
-.listContainer li{
-    width: 100%;
+.listContainer li {
+    width: 90%;
     display: flex;
     border-top: solid 1px #3b3b3b;
     height: 2rem;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem;
     justify-content: space-between;
 }
 
 
 
-.divIcons{
+.divIcons {
     display: flex;
     gap: 1rem;
     font-size: 1.5rem;
 }
 
-.iconList{
+.iconList {
     background-color: #33383F;
     padding: 0.3rem;
     border-radius: 6px;
 }
 
-.soccerIcon{
+.soccerIcon {
     position: fixed;
     font-size: 18rem;
     bottom: 40%;
@@ -58,23 +58,25 @@ font-weight: 400;
 
 @keyframes blink {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     50% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-.textoLista{
+}
+
+.textoLista {
     display: flex;
     width: 80vw;
     justify-content: space-between;
 }
 
-.quantidadeJogador{
+.quantidadeJogador {
     font-weight: 400;
     font-size: larger;
 }
