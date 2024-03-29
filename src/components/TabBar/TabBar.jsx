@@ -32,7 +32,7 @@ const TabBar = () => {
                 <HiUserAdd />
             </Link>
 
-            <Link className={isActive('/game')} to="/game">
+            <Link className={isActive('/game')} to="/game"  onClick={handleRankingClick}>
                 <GiSoccerField />
             </Link>
         </div>
