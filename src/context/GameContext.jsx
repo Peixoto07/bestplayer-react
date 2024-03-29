@@ -52,7 +52,7 @@ export const GameProvider = ({ children }) => {
         for (let i = 1; i <= numTimes; i++) {
             timesSorteados.push(jogadoresEmbaralhados.slice((i - 1) * jogadoresPorTime, i * jogadoresPorTime));
         }
-        console.log(jogadoresNecessarios);
+        
         setTimes(timesSorteados);
         setRenderTimesOuJogadores("times");
     };
