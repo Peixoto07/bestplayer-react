@@ -13,7 +13,7 @@ const UserIcon = () => {
                 <div key={index} className="userBox">
                     <div className="iconBox">
                         {index === 0 && <RiVipCrownFill className="iconCrown" />}
-                        <PiUserCircleFill className="iconUser" size={index === 0 ? "8rem" : undefined} />
+                        <PiUserCircleFill className="iconUser" size={index === 0 ? "6rem" : undefined} />
                     </div>
                     <div className="nameUser">
                         {usuario.nome}

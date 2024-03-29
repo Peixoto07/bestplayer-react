@@ -47,8 +47,9 @@
 .jogadoresContainer{
     display: flex;
     flex-direction: column;
+    overflow: auto;
     align-items: center;
-    height: 53vh;
+    height: 50vh;
 }
 
 .jogadoresContainer ul{
