@@ -2,22 +2,17 @@ import './TabBar.css';
 import { FaRankingStar } from "react-icons/fa6";
 import { HiUserAdd } from "react-icons/hi";
 import { GiSoccerField } from "react-icons/gi";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useUsuarios from '../hooks/useUsuarios';
 import useAlert from '../hooks/useAlert';
-import { useEffect } from 'react';
 
 const TabBar = () => {
     const location = useLocation();
     const { usuarios } = useUsuarios();
     const { mostrarAlerta } = useAlert();
-    const navigate = useNavigate();
+   
     
-    useEffect(() => {
-        if (usuarios.length < 3) {
-            navigate('/');
-        }
-    }, [usuarios, navigate]);
+
 
 
     const isActive = (path) => {
