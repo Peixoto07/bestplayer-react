@@ -1,15 +1,17 @@
 .tabContainer{
 
     display: flex;
-    width: 85vw;
+    min-width: 22rem;
+    width: 50%;
     padding: 8px 0;
-    box-shadow: 0 0px 14px 0px rgb(0 0 0 / 43%);
+    box-shadow: 0 0 14px #0000006e;
     border-radius: 50px;
-    background-color: black;
+    background-color: #000;
     align-items: center;
     justify-content: space-around;
     position: fixed;
     bottom: 24px;
+    transition: all .3s ease-in-out;
 }
 
 .tabContainer a{
@@ -29,6 +31,7 @@
     background-color: #FA2D38;
     color: black;
     font-size: 2.8rem;
+    transition: all .5s ease-in-out;
 }
 
 .desactiveButton{

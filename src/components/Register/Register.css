@@ -1,16 +1,15 @@
 .formContainer{
-    width: 100vw;
-    height: 6vh;
-    margin: 10px 0;
+    width: 90%;
+    height: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .formContainer input{
-    min-width: 65vw;
+    width: 90%;
     border: none;
-    background-color: #33383F;
-    color: white;
+    background-color: #33383f;
+    color: #fff;
     outline: none;
     border-radius: 8px 0 0 8px;
     padding: 0 8px;

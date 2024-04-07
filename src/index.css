@@ -4,6 +4,16 @@
   font-weight: 400;
 
 }
+#root {
+  max-width: 1280px;
+  margin: 0;
+  height: 100vh;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 
 body {
