@@ -25,23 +25,33 @@ const TimeContainer = () => {
             {renderTimesOuJogadores === "jogadores" ? (
                 <div className='jogadoresContainer'>
                     <div className='checkboxAll'>
-                        <label>
-                            Selecionar todos
-                        </label>
-                        <input
-                            type="checkbox"
-                            checked={marcarTodos}
-                            onChange={handleMarcarTodos}
-                        />
+                        <label>Selecionados ({jogadoresSelecionados.length})</label>
+                        <div>
+                            <label>
+                                Todos
+                            </label>
+                            <input
+                                type="checkbox"
+                                id='chk'
+                                checked={marcarTodos}
+                                onChange={handleMarcarTodos}
+                            />
+                            <label htmlFor="chk" className='switch'>
+                                <span className='slider'></span>
+                            </label>
+                        </div>
+
                     </div>
                     <ul className='listContainer'>
                         {usuarios.map((usuario, index) => (
-                            <li key={index}>
+                            <li
+                                key={index}>
                                 <div className="divNameList">
                                     <strong>{usuario.nome}</strong>
                                 </div>
                                 <div>
                                     <input
+                                       
                                         type="checkbox"
                                         checked={jogadoresSelecionados.includes(usuario)}
                                         onChange={(event) => handleCheckboxChange(event, usuario)}
@@ -53,17 +63,17 @@ const TimeContainer = () => {
                 </div>
             ) : (
                 <div className="timesContainer">
-                {times.map((jogadoresDoTime, index) => ( 
-                    <div key={index}>
-                        <h3>Time {index + 1}</h3> 
-                        <ul>
-                            {jogadoresDoTime.map((jogador, jogadorIndex) => (
-                                <li key={jogadorIndex}>{jogador.nome}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
+                    {times.map((jogadoresDoTime, index) => (
+                        <div key={index}>
+                            <h3>Time {index + 1}</h3>
+                            <ul>
+                                {jogadoresDoTime.map((jogador, jogadorIndex) => (
+                                    <li key={jogadorIndex}>{jogador.nome}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             )}
         </>
     );
