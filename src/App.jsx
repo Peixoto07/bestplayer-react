@@ -16,7 +16,8 @@ function App() {
   return (
           <AlertProvider>
     <Header/>
-      <TabBar/>
+    <section className='sectionContainer'>
+
       <Routes>
         <Route path='/' element ={<Home />} />
         
@@ -28,6 +29,8 @@ function App() {
           ) : null}
         
       </Routes>
+    </section>
+          <TabBar/>
         </AlertProvider>
   )
 }
